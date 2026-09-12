@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>INDIA RESULT - Latest Jobs, Results, Admit Card & Answer Key</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+:root{
+    --bg:#ffffff;
+    --card:#ffffff;
+    --text:#111111;
+    --red:#b40000;
+    --red2:#8f0000;
+    --blue:#0000a8;
+    --nav:#0047ab;
+    --border:#a00000;
+    --search:#f5f5f5;
+}
+
+body.dark{
+    --bg:#111111;
+    --card:#1d1d1d;
+    --text:#eeeeee;
+    --red:#d51b1b;
+    --red2:#a80000;
+    --blue:#55aaff;
+    --nav:#073b82;
+    --border:#d22b2b;
+    --search:#292929;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    transition:0.3s;
+}
+
+/* HEADER */
+.header{
+    background:linear-gradient(135deg,#d00000,#8c0000);
+    color:white;
+    text-align:center;
+    padding:18px 10px;
+    position:relative;
+}
+
+.logo-box{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+}
+
+.logo-photo{
+    width:82px;
+    height:82px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid white;
+    background:white;
+}
+
+.logo-fallback{
+    width:82px;
+    height:82px;
+    border-radius:50%;
+    background:white;
+    color:#b40000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    font-weight:bold;
+    border:4px solid white;
+}
+
+.logo-text h1{
+    font-size:34px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+.logo-text p{
+    font-size:15px;
+    margin-top:5px;
+}
+
+/* DARK BUTTON */
+.dark-btn{
+    position:absolute;
+    right:15px;
+    top:15px;
+    background:#111;
+    color:white;
+    border:2px solid white;
+    border-radius:25px;
+    padding:9px 14px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+body.dark .dark-btn{
+    background:white;
+    color:#111;
+}
+
+/* NAVIGATION */
+.nav{
+    background:var(--nav);
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:4px;
+    padding:7px;
+}
+
+.nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    padding:10px 13px;
+    border-radius:4px;
+}
+
+.nav a:hover{
+    background:#002c70;
+}
+
+/* SEARCH */
+.search-area{
+    padding:15px 10px;
+    background:var(--card);
+    text-align:center;
+}
+
+.search-box{
+    width:min(700px,95%);
+    margin:auto;
+    display:flex;
+}
+
+.search-box input{
+    flex:1;
+    padding:13px;
+    border:2px solid var(--nav);
+    border-right:none;
+    outline:none;
+    background:var(--search);
+    color:var(--text);
+    font-size:16px;
+}
+
+.search-box button{
+    padding:13px 22px;
+    border:none;
+    background:var(--nav);
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* NOTICE */
+.notice{
+    text-align:center;
+    background:#fff2f2;
+    color:#b40000;
+    padding:10px;
+    font-weight:bold;
+}
+
+body.dark .notice{
+    background:#351717;
+}
+
+/* MAIN */
+.container{
+    width:98%;
+    max-width:1450px;
+    margin:12px auto;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:12px;
+}
+
+/* CARD */
+.card{
+    background:var(--card);
+    border:2px solid var(--border);
+    border-radius:3px;
+    overflow:hidden;
+}
+
+.card-header{
+    background:var(--red);
+    color:white;
+    text-align:center;
+    padding:11px 6px;
+    font-size:21px;
+    font-weight:900;
+}
+
+.list{
+    padding:8px 14px 14px;
+}
+
+.list li{
+    list-style:none;
+    padding:7px 2px;
+    line-height:1.35;
+    border-bottom:1px dotted #aaa;
+}
+
+.list li:last-child{
+    border-bottom:none;
+}
+
+.list li::before{
+    content:"• ";
+    color:var(--red);
+    font-weight:bold;
+}
+
+.list a{
+    color:var(--blue);
+    text-decoration:none;
+    font-size:17px;
+    font-weight:bold;
+}
+
+.list a:hover{
+    text-decoration:underline;
+}
+
+.view-more{
+    display:block;
+    width:max-content;
+    margin:8px auto 3px;
+    padding:9px 22px;
+    border-radius:25px;
+    background:#075fc5;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* NO RESULT */
+.no-result{
+    display:none;
+    text-align:center;
+    padding:30px;
+    color:#d00000;
+    font-weight:bold;
+    font-size:20px;
+}
+
+/* FOOTER */
+footer{
+    margin-top:20px;
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:25px 10px;
+}
+
+footer h2{
+    margin-bottom:8px;
+}
+
+footer a{
+    color:#55aaff;
+    text-decoration:none;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+    .logo-photo,
+    .logo-fallback{
+        width:65px;
+        height:65px;
+    }
+
+    .logo-text h1{
+        font-size:25px;
+    }
+
+    .logo-text p{
+        font-size:11px;
+    }
+
+    .dark-btn{
+        position:static;
+        margin-top:10px;
+    }
+
+    .nav a{
+        font-size:12px;
+        padding:8px 7px;
+    }
+
+    .grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:7px;
+    }
+
+    .card-header{
+        font-size:15px;
+        padding:9px 3px;
+    }
+
+    .list{
+        padding:5px 7px 10px;
+    }
+
+    .list li{
+        padding:6px 0;
+    }
+
+    .list a{
+        font-size:14px;
+    }
+
+    .view-more{
+        font-size:12px;
+        padding:7px 12px;
+    }
+}
+
+@media(max-width:380px){
+    .grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+    <div class="logo-box">
+
+        <img
+            src="logo.jpg"
+            class="logo-photo"
+            alt="India Result Logo"
+            onerror="this.style.display='none';document.getElementById('fallback').style.display='flex';"
+        >
+
+        <div id="fallback" class="logo-fallback">
+            IR
+        </div>
+
+        <div class="logo-text">
+            <h1>INDIA RESULT</h1>
+            <p>Latest Jobs, Results, Admit Card & Answer Key</p>
+        </div>
+
+    </div>
+
+    <button class="dark-btn" onclick="toggleDarkMode()" id="darkButton">
+        🌙 Dark Mode
+    </button>
+
+</header>
+
+
+<!-- NAVIGATION -->
+<nav class="nav">
+
+<a href="#home">Home</a>
+<a href="#latest-jobs">Latest Jobs</a>
+<a href="#results">Results</a>
+<a href="#admit-card">Admit Card</a>
+<a href="#answer-key">Answer Key</a>
+<a href="#admission">Admission</a>
+<a href="#iti-jobs">10th/ITI Jobs</a>
+<a href="#outsourcing">Outsourcing</a>
+<a href="#syllabus">Syllabus</a>
+<a href="#documents">Documents</a>
+
+</nav>
+
+
+<!-- SEARCH -->
+<div class="search-area">
+
+<div class="search-box">
+<input
+    type="text"
+    id="searchInput"
+    placeholder="Search Jobs, Results, Admit Card..."
+>
+<button onclick="searchItems()">Search</button>
+</div>
+
+</div>
+
+
+<!-- NOTICE -->
+<div class="notice">
+📢 Welcome to INDIA RESULT — Latest Government Jobs, Results, Admit Cards & Answer Keys
+</div>
+
+
+<main class="container">
+
+<!-- HOME -->
+<section id="home" class="card" style="margin-bottom:12px;">
+    <div class="card-header">HOME</div>
+
+    <div style="padding:18px;text-align:center;">
+        <h2 style="color:var(--red);margin-bottom:8px;">
+            Welcome to INDIA RESULT
+        </h2>
+
+        <p>
+            यहाँ Latest Government Jobs, Results, Admit Card,
+            Answer Key, Admission और Syllabus की जानकारी मिलेगी।
+        </p>
+    </div>
+</section>
+
+
+<div class="grid">
+
+
+<!-- LATEST JOBS -->
+<section class="card" id="latest-jobs">
+
+<div class="card-header">LATEST JOBS</div>
+
+<ul class="list">
+
+<li><a href="https://upsssc.gov.in/" target="_blank">UPSSSC Livestock Extension Officer Online Form 2026 - Start</a></li>
+
+<li><a href="https://esb.mp.gov.in/" target="_blank">MPESB MP Police Constable Online Form 2026 (7500 Posts)</a></li>
+
+<li><a href="https://www.indiapost.gov.in/gdsonlineengagement" target="_blank">India Post GDS Online Form 2026 (23,757 Posts)</a></li>
+
+<li><a href="https://ssc.gov.in/" target="_blank">SSC CHSL 10+2 Online Form 2026</a></li>
+
+<li><a href="https://bpsc.bihar.gov.in/" target="_blank">BPSC School Teacher TRE 4.0 Online Form 2026 (32,388 Posts)</a></li>
+
+<li><a href="https://www.ibps.in/" target="_blank">IBPS RRB 15th Online Form 2026 (13,706 Posts)</a></li>
+
+<li><a href="https://www.bankofbaroda.in/career" target="_blank">Bank Of Baroda LBO Online Form 2026 (2482 Posts)</a></li>
+
+<li><a href="https://rajasthan.gov.in/" target="_blank">Rajasthan Safai Karmchari Online Form 2026 (24,752 Posts)</a></li>
+
+<li><a href="https://ssc.gov.in/" target="_blank">SSC Junior Engineer JE Online Form 2026</a></li>
+
+<li><a href="https://updeled.gov.in/" target="_blank">UP Special TET Online Form 2026</a></li>
+
+<li><a href="https://ctet.nic.in/" target="_blank">CTET September Correction / Edit Form 2026</a></li>
+
+<li><a href="https://www.rrbchennai.gov.in/" target="_blank">RRC SR Apprentice Online Form 2026 (4471 Posts)</a></li>
+
+<li><a href="https://esb.mp.gov.in/" target="_blank">MPESB MP Police SI, Subedar Online Form 2026</a></li>
+
+<li><a href="https://indianrailways.gov.in/" target="_blank">RRB Junior Engineer JE Online Form 2026 (4029 Posts)</a></li>
+
+<li><a href="https://hphighcourt.nic.in/" target="_blank">Himachal Pradesh High Court Various Post Online Form 2026</a></li>
+
+<li><a href="https://www.upsc.gov.in/" target="_blank">UPSC EPFO / APFC Online Form 2026</a></li>
+
+<li><a href="https://up.gov.in/" target="_blank">UPESSC UP Assistant Professor Online Form 2026</a></li>
+
+<li><a href="https://balvikasup.gov.in/" target="_blank">UP Anganwadi Bharti Online Form 2026 (Updated)</a></li>
+
+<li><a href="https://www.gims.ac.in/" target="_blank">GIMS Noida Staff Nurse Online Form 2026 - Date Extend</a></li>
+
+<li><a href="https://biharboardonline.bihar.gov.in/" target="_blank">Bihar STET Online Form 2026</a></li>
+
+<li><a href="https://ssc.gov.in/" target="_blank">SSC JHT 2025 Option Cum Preference Form</a></li>
+
+<li><a href="https://bpssc.bihar.gov.in/" target="_blank">BPSSC Bihar Police Company Commander Online Form 2026</a></li>
+
+<li><a href="https://indianrailways.gov.in/" target="_blank">RRB Paramedical Staff Online Form 2026</a></li>
+
+<li><a href="https://upsssc.gov.in/" target="_blank">UPSSSC Computer Operator Online Form 2026 - Start</a></li>
+
+<li><a href="https://uiic.co.in/" target="_blank">UIICL Administrative Officer Online Form 2026</a></li>
+
+<li><a href="https://esb.mp.gov.in/" target="_blank">MPESB Group 3 Sub Engineer & Other Post Online Form 2026</a></li>
+
+<li><a href="https://indianrailways.gov.in/" target="_blank">Railway ICF Apprentice Online Form 2026</a></li>
+
+<li><a href="https://rcf.indianrailways.gov.in/" target="_blank">RCF Kapurthala Apprentice Online Form 2026</a></li>
+
+<li><a href="https://sssc.uk.gov.in/" target="_blank">UKSSSC Group C Various Post Online Form 2026</a></li>
+
+<li><a href="https://wcd.odisha.gov.in/" target="_blank">Odisha Anganwadi Bharti Online Form 2026</a></li>
+
+<li><a href="https://esb.mp.gov.in/" target="_blank">MPESB Group 3 Sub Engineer Online Form 2026</a></li>
+
+<li><a href="https://indianrailways.gov.in/" target="_blank">RRC ECOR Apprentice Online Form 2026</a></li>
+
+<li><a href="https://www.powergrid.in/" target="_blank">PGCIL Apprentice Online Form 2026</a></li>
+
+<li><a href="https://upsssc.gov.in/" target="_blank">UPSSSC Junior Engineer JE Agriculture Online Form 2026</a></li>
+
+</ul>
+
+<a class="view-more" href="https://www.ncs.gov.in/" target="_blank">View More</a>
+
+</section>
+
+
+<!-- RESULTS -->
+<section class="card" id="results">
+
+<div class="card-header">RESULTS</div>
+
+<ul class="list">
+
+<li><a href="https://upsssc.gov.in/" target="_blank">UPSSSC Junior Assistant, Clerk Grade II 2023 Final Result</a></li>
+
+<li><a href="https://tribal.gov.in/" target="_blank">EMRS Teaching / Non Teaching Tier-II Result 2026 - Updated</a></li>
+
+<li><a href="https://afcat.cdac.in/AFCAT/" target="_blank">AFCAT 02/2026 Result - Out</a></li>
+
+<li><a href="https://www.upsc.gov.in/" target="_blank">UPSC CAPF AC Name Wise Result 2026 - Out</a></li>
+
+<li><a href="https://indianrailways.gov.in/" target="_blank">Railway RRB Group D Answer Key 2026 - Out</a></li>
+
+<li><a href="https://updeled.gov.in/" target="_blank">UPTET 2026 Certificate</a></li>
+
+<li><a href="https://upsssc.gov.in/" target="_blank">UPSSSC Nakshanavish and Manchitrak 2023 Mains Result</a></li>
+
+<li><a href="https://bceceboard.bihar.gov.in/" target="_blank">BCECE Admission 2026 Mop-up Allotment Result</a></li>
+
+<li><a href="https://rpsc.rajasthan.gov.in/" target="_blank">RPSC Deputy Jailor PET Result 2026</a></li>
+
+<li><a href="https://uppsc.up.nic.in/" target="_blank">UPPSC Computer Assistant Typing Test Result 2026</a></li>
+
+<li><a href="https://uppsc.up.nic.in/" target="_blank">UPPSC LT Grade Assistant Teacher Mains Result 2026</a></li>
+
+<li><a href="https://www.upsc.gov.in/" target="_blank">UPSC CMS Result 2026 - Out</a></li>
+
+<li><a href="https://psc.cg.gov.in/" target="_blank">CGPSC SSE PCS Mains Result 2026</a></li>
+
+<li><a href="https://bseh.org.in/" target="_blank">Haryana HTET OMR Answer Sheet 2026</a></li>
+
+<li><a href="https://www.ncert.nic.in/" target="_blank">NCERT LDC Post Result 2026 - Out</a></li>
+
+<li><a href="https://esb.mp.gov.in/" target="_blank">MPESB Group 2 Sub Group 3 Result 2026</a></li>
+
+<li><a href="https://www.jammuuniversity.ac.in/" target="_blank">Jammu University Result 2026 Out</a></li>
+
+<li><a href="https://www.nta.ac.in/" target="_blank">NTA ICAR AIEEA PG Ph.D Result / Score Card 2026 - Out</a></li>
+
+<li><a href="https://www.nta.ac.in/" target="_blank">NTA CSIR UGC NET June Result / Cutoff 2026 - Out</a></li>
+
+<li><a href="https://btsc.bihar.gov.in/" target="_blank">Bihar BTSC Staff Nurse Result / Cutoff 2026 - Out</a></li>
+
+<li><a href="https://opportunities.rbi.org.in/" target="_blank">RBI Bank Assistant Pre Exam Marks / Cutoff 2026</a></li>
+
+<li><a href="https://scvtup.in/" target="_blank">UP SCVTUP ITI 1st Round Allotment Result 2026 - Out</a></li>
+
+<li><a href="https://uppsc.up.nic.in/" target="_blank">UP PGT 2022 Student Waiting List</a></li>
+
+<li><a href="https://uppsc.up.nic.in/" target="_blank">UP TGT 2022 Sanskrit Revised Result</a></li>
+
+<li><a href="https://ssc.gov.in/" target="_blank">SSC Stenographer C, D 2025 Final Result - Out</a></li>
+
+</ul>
+
+<a class="view-more" href="https://ssc.gov.in/" target="_blank">View More</a>
+
+</section>
+
+
+<!-- ANSWER KEY -->
+<section class="card" id="answer-key">
+
+<div class="card-header">ANSWER KEY</div>
+
+<ul class="list">
+
+<li><a href="https://indianrailways.gov.in/" target="_blank">Railway RRB Group D Answer Key 2026 - Out</a></li>
+
+<li><a href="https://rpsc.rajasthan.gov.in/" target="_blank">RPSC Statistical Officer Answer Key 2026 - Out</a></li>
+
+<li><a href="https://rpsc.rajasthan.gov.in/" target="_blank">RPSC APO Answer Key 2026 - Out</a></li>
+
+<li><a href="https://www.nta.ac.in/" target="_blank">NTA AIAPGET Answer Key 2026</a></li>
+
+<li><a href="https://www.nta.ac.in/" target="_blank">CCI Various Post Answer Key 2026</a></li>
+
+<li><a href="https://bsnl.co.in/" target="_blank">BSNL Junior Telecom Officer JTO Answer Key 2026 - Out</a></li>
+
+<li><a href="https://www.nta.ac.in/" target="_blank">NTA CSIR UGC NET June Result / Cutoff 2026 - Out</a></li>
+
+<li><a href="https://upsssc.gov.in/" target="_blank">UPSSSC Lower PCS Answer Key 2026 - Out</a></li>
+
+<li><a href="https://upsssc.gov.in/" target="_blank">UPSSSC BCG Technician Final Answer Key 2026 - Out</a></li>
+
+<li><a href="https://upsssc.gov.in/" target="_blank">UPSSSC UP Pollution Control Board Various Post Final Answer Key 2026 - Out</a></li>
+
+<li><a href="https://upsssc.gov.in/" target="_blank">UPSSSC Pharmacist Final Answer Key 2026 - Out</a></li>
+
+<li><a href="https://bpsc.bihar.gov.in/" target="_blank">Bihar BPSC APO Answer Key 2026</a></li>
+
+<li><a href="https://upsssc.gov.in/" target="_blank">UPSSSC Agriculture Technical Assistant Group-C Answer Key 2026 - Out</a></li>
+
+<li><a href="https://jssc.nic.in/" target="_blank">JSSC Field Worker Answer Key 2026 - Out</a></li>
+
+<li><a href="https://indianrailways.gov.in/" target="_blank">RRB ALP CBT-II Answer Key 2026</a></li>
+
+<li><a href="https://www.nta.ac.in/" target="_blank">NTA UGC NET Answer Key 2026</a></li>
+
+<li><a href="https://www.nta.ac.in/" target="_blank">NTA ICAR Answer Key 2026</a></li>
+
+<li><a href="https://ctet.nic.in/" target="_blank">CTET Final Answer Key 2026</a></li>
+
+<li><a href="https://ssc.gov.in/" target="_blank">SSC Answer Keys 2026</a></li>
+
+<li><a href="https://indianrailways.gov.in/" target="_blank">Railway Answer Keys 2026</a></li>
+
+<li><a href="https://esb.mp.gov.in/" target="_blank">MPESB Answer Keys 2026</a></li>
+
+</ul>
+
+<a class="view-more" href="https://ssc.gov.in/" target="_blank">View More</a>
+
+</section>
+
+
+<!-- ADMIT CARD -->
+<section class="card" id="admit-card">
+
+<div class="card-header">ADMIT CARD</div>
+
+<ul class="list">
+
+<li><a href="https://upsssc.gov.in/" target="_blank">UPSSSC PET Exam Date 2026 - Out</a></li>
+
+<li><a href="https://sbi.co.in/web/careers" target="_blank">SBI Junior Associates Clerk Backlog Admit Card 2026</a></li>
+
+<li><a href="https://www.aiimsexams.ac.in/" target="_blank">AIIMS NORCET 11th Admit Card 2026 - Out</a></li>
+
+<li><a href="https://indianrailways.gov.in/" target="_blank">RRB NTPC 10+2 UG CBT-II Exam City Details 2026 - Out</a></li>
+
+<li><a href="https://ssc.gov.in/" target="_blank">SSC Selection Phase 14 Exam City Details 2026 - Out</a></li>
+
+<li><a href="https://esb.mp.gov.in/" target="_blank">MPESB ASI / HC Practical Admit Card 2026</a></li>
+
+<li><a href="https://bceceboard.bihar.gov.in/" target="_blank">SAV Bihar Class 6 Dummy Admit Card 2026</a></li>
+
+<li><a href="https://uppsc.up.nic.in/" target="_blank">UPPSC Assistant Professor Mains Admit Card 2026</a></li>
+
+<li><a href="https://upsssc.gov.in/" target="_blank">UPSSSC Forensic Science Laboratory Mains Exam Fee Payment 2026</a></li>
+
+<li><a href="https://upsssc.gov.in/" target="_blank">UPSSSC Forest Guard / Wildlife Guard Mains Exam Fee Payment 2026</a></li>
+
+<li><a href="https://patnahighcourt.gov.in/" target="_blank">Patna High Court Assistant Exam Date 2026 - Out</a></li>
+
+<li><a href="https://delhihighcourt.nic.in/" target="_blank">Delhi High Court JJA Stage-II Mains Exam Date 2026 - Out</a></li>
+
+<li><a href="https://up.gov.in/" target="_blank">UP Home Guard PET / PST Admit Card 2026</a></li>
+
+<li><a href="https://rpsc.rajasthan.gov.in/" target="_blank">Rajasthan State Eligibility Test SET Admit Card 2026</a></li>
+
+<li><a href="https://ssc.gov.in/" target="_blank">SSC Stenographer Admit Card 2026</a></li>
+
+<li><a href="https://bpsc.bihar.gov.in/" target="_blank">Bihar BPSC Factory Inspector Revised DV Schedule 2026</a></li>
+
+<li><a href="https://up.gov.in/" target="_blank">UPCISB UP Cooperative Bank Various Post Exam Date 2026</a></li>
+
+<li><a href="https://csbc.bihar.gov.in/" target="_blank">Bihar Police CSBC Constable GD PST/DV Admit Card 2026 - Out</a></li>
+
+<li><a href="https://up.gov.in/" target="_blank">UPCISB UP Co-operative Bank Various Post Admit Card 2026</a></li>
+
+<li><a href="https://www.nta.ac.in/" target="_blank">NTA UGC NET June Re-Exam Admit Card 2026 - Out</a></li>
+
+<li><a href="https://ssc.gov.in/" target="_blank">SSC Combined Hindi Translators JHT Admit Card 2026</a></li>
+
+<li><a href="https://sbi.co.in/web/careers" target="_blank">SBI PO Mains Admit Card 2026</a></li>
+
+<li><a href="https://www.upsc.gov.in/" target="_blank">UPSC NDA II Admit Card 2026 - Out</a></li>
+
+<li><a href="https://www.upsc.gov.in/" target="_blank">UPSC CDS-II Admit Card 2026 - Out</a></li>
+
+<li><a href="https://delhihighcourt.nic.in/" target="_blank">Delhi High Court Higher Judicial Service HJS Mains Exam Date 2026</a></li>
+
+<li><a href="https://ctet.nic.in/" target="_blank">CTET Admit Card 2026</a></li>
+
+<li><a href="https://www.nta.ac.in/" target="_blank">NTA UGC NET Admit Card 2026</a></li>
+
+<li><a href="https://www.nta.ac.in/" target="_blank">NTA AIAPGET Admit Card 2026</a></li>
+
+<li><a href="https://esb.mp.gov.in/" target="_blank">MPESB Admit Card 2026</a></li>
+
+<li><a href="https://indianrailways.gov.in/" target="_blank">Railway Admit Cards 2026</a></li>
+
+<li><a href="https://ssc.gov.in/" target="_blank">SSC Admit
